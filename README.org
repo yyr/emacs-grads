@@ -1,0 +1,8 @@
+* Emacs Major mode to edit [[http://iges.org/grads][grads]] (.gs) files
+  This is a Emacs Major Mode for editing grads( The Grid Analysis and
+  Display System) scripting files.
+
+* Licence
+  Copyright (C) Yagnesh Raghava Yakkala. www.yagnesh.org
+  Author: Yagnesh Raghava Yakkala <yagnesh@live.com>
+  Licence: GPL v3 or later
