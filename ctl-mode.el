@@ -1,4 +1,4 @@
-;;; ctl-mode-el -- Major mode for editing GrADS script files
+;;; ctl-mode.el --- Major mode for editing GrADS script files
 
 ;; Author: Joe Wielgosz <joew@cola.iges.org>
 ;; Created: 2 Oct 2003
