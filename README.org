@@ -1,5 +1,5 @@
-* Emacs Major modes to edit [[http://iges.org/grads][Grads]] files (gs and ctl)
+** Emacs Major modes to edit [[http://iges.org/grads][Grads]] files (gs and ctl)
   Original author Joe Wielgosz <joew@cola.iges.org>.
 
-* Licence
+** Licence
   Licence: GPL v3 or later

@@ -3,6 +3,7 @@
 ;; Author: Joe Wielgosz <joew@cola.iges.org>
 ;; Created: 2 Oct 2003
 ;; Keywords: GrADS script major-mode
+;; Version: 0.1
 
 ;; Copyright (C) Joe Wielgosz <joew@cola.iges.org>
 
@@ -28,8 +29,6 @@
 ;; which is an example used in a tutorial about Emacs
 ;; mode creation. The tutorial can be found here:
 ;; http://two-wugs.net/emacs/mode-tutorial.html
-
-;; $$revision$$
 
 ;;; Code:
 (defvar gs-mode-hook nil)
