@@ -22,7 +22,7 @@
 ;; MA 02111-1307 USA
 
 ;;; Commentary:
-;; 
+;;
 ;; Based on wpdl-mode-el, a major mode for editing WPDL files
 ;; by Scott Andrew Borton <scott@pp.htv.fi>,
 ;; which is an example used in a tutorial about Emacs
@@ -40,28 +40,27 @@
   (setq ctl-mode-map (make-keymap)))
 
 (setq auto-mode-alist
-	  (append
-	   '(("\\.ctl\\'" . ctl-mode))
-	   auto-mode-alist))
+      (append
+       '(("\\.ctl\\'" . ctl-mode))
+       auto-mode-alist))
 
 (defconst ctl-font-lock-keywords-1
   (list
-
-   ; generated with (regexp-opt '("dset" "dtype" "index" "title"
-   ; "undef" "options" "xdef" "ydef" "zdef" "tdef" "vars" "endvars"
-   ; "fileheader" "theader" "xyheader" "unpack") t)
+   ;; generated with (regexp-opt '("dset" "dtype" "index" "title"
+   ;; "undef" "options" "xdef" "ydef" "zdef" "tdef" "vars" "endvars"
+   ;; "fileheader" "theader" "xyheader" "unpack") t)
 
    '("\\<\\(d\\(?:set\\|type\\)\\|endvars\\|fileheader\\|index\\|stnmap\\|options\\|t\\(?:def\\|header\\|itle\\)\\|un\\(?:def\\|pack\\)\\|vars\\|x\\(?:def\\|yheader\\)\\|[yz]def\\|D\\(?:SET\\|TYPE\\)\\|ENDVARS\\|FILEHEADER\\|INDEX\\|STNMAP\\|OPTIONS\\|T\\(?:DEF\\|HEADER\\|ITLE\\)\\|UN\\(?:DEF\\|PACK\\)\\|VARS\\|X\\(?:DEF\\|YHEADER\\)\\|[YZ]DEF\\)\\>" . font-lock-keyword-face)
 
 
 
-   ; builtins: say prompt pull sublin subwrd substr read write close
+   ;; builtins: say prompt pull sublin subwrd substr read write close
    '("\\<\\(365_day_calendar\\|b\\(?:ig_endian\\|yteswapped\\)\\|cray_32bit_ieee\\|grib\\|hdfsds\\|l\\(?:evels\\|i\\(?:near\\|ttle_endian\\)\\)\\|netcdf\\|s\\(?:equential\\|tation\\)\\|template\\|[yz]rev\\|365_DAY_CALENDAR\\|B\\(?:IG_ENDIAN\\|YTESWAPPED\\)\\|CRAY_32BIT_IEEE\\|GRIB\\|HDFSDS\\|L\\(?:EVELS\\|I\\(?:NEAR\\|TTLE_ENDIAN\\)\\)\\|NETCDF\\|S\\(?:EQUENTIAL\\|TATION\\)\\|TEMPLATE\\|[YZ]REV\\)\\>" . font-lock-builtin-face)
 
-; unused faces:
-;   '("\\('\\d*'\\)" . font-lock-variable-name-face)
-  '("\\<\\([-e.0-9]+\\)\\>" . font-lock-constant-face)
-  "Highlighting expressions for ctl-mode."))
+   ;; unused faces:
+   ;;   '("\\('\\d*'\\)" . font-lock-variable-name-face)
+   '("\\<\\([-e.0-9]+\\)\\>" . font-lock-constant-face)
+   "Highlighting expressions for ctl-mode."))
 
 (defvar ctl-font-lock-keywords ctl-font-lock-keywords-1
   "Default highlighting expressions for ctl-mode.")
@@ -71,15 +70,15 @@
 
 (defun ctl-create-syntax-table ()
   (if ctl-mode-syntax-table
-	  ()
-	(setq ctl-mode-syntax-table (make-syntax-table))
-	
-    ; This is added so entity names with underscores and periods can be more easily parsed
-	(modify-syntax-entry ?_ "w" ctl-mode-syntax-table)
-  
-	; Comment syntax
-	(modify-syntax-entry ?* "<" ctl-mode-syntax-table)
-	(modify-syntax-entry ?\n ">" ctl-mode-syntax-table)) 
+      ()
+    (setq ctl-mode-syntax-table (make-syntax-table))
+
+    ;; This is added so entity names with underscores and periods can be more easily parsed
+    (modify-syntax-entry ?_ "w" ctl-mode-syntax-table)
+
+    ;; Comment syntax
+    (modify-syntax-entry ?* "<" ctl-mode-syntax-table)
+    (modify-syntax-entry ?\n ">" ctl-mode-syntax-table))
 
   (set-syntax-table ctl-mode-syntax-table))
 
@@ -88,16 +87,16 @@
   (interactive)
   (kill-all-local-variables)
   (ctl-create-syntax-table)
-  
+
   ;; Set up font-lock
   (make-local-variable 'font-lock-defaults)
   (setq font-lock-defaults
-		'(ctl-font-lock-keywords))
-  
+        '(ctl-font-lock-keywords))
+
   ;; Register our indentation function
-;  (make-local-variable 'indent-line-function)
-;  (setq indent-line-function 'ctl-indent-line)
-  
+  ;; (make-local-variable 'indent-line-function)
+  ;; (setq indent-line-function 'ctl-indent-line)
+
   (setq major-mode 'ctl-mode)
   (setq mode-name "GrADS descriptor file")
   (run-hooks 'ctl-mode-hook))
@@ -105,6 +104,3 @@
 (provide 'ctl-mode)
 
 ;;; ctl-mode.el ends here
-
-
-
