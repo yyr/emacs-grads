@@ -1,4 +1,4 @@
-;;; gs-mode-el -- Major mode for editing GrADS script files
+;;; gs-mode.el --- Major mode for editing GrADS script files
 
 ;; Author: Joe Wielgosz <joew@cola.iges.org>
 ;; Created: 2 Oct 2003
