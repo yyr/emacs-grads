@@ -121,7 +121,6 @@
     (modify-syntax-entry ?\' "\"" gs-mode-syntax-table)
     (modify-syntax-entry ?\" "\"" gs-mode-syntax-table))
 
-
   (set-syntax-table gs-mode-syntax-table))
 
 (defun gs-mode ()
@@ -144,5 +143,4 @@
   (run-hooks 'gs-mode-hook))
 
 (provide 'gs-mode)
-
 ;;; gs-mode.el ends here
