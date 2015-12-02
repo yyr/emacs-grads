@@ -81,6 +81,7 @@
 
   (set-syntax-table ctl-mode-syntax-table))
 
+;;;###autoload
 (defun ctl-mode ()
   "Major mode for editing GrADS descriptor files."
   (interactive)
