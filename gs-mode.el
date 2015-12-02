@@ -123,6 +123,7 @@
 
   (set-syntax-table gs-mode-syntax-table))
 
+;;;###autoload
 (defun gs-mode ()
   "Major mode for editing GrADS script files."
   (interactive)
